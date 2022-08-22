@@ -89,7 +89,7 @@ ul {
   height: 1px;
   background-color: #fff;
   transform: scaleX(0);
-  transition: 0.6s ease-in;
+  transition: transform 0.6s ease-in;
 }
 
 .desktop-main-menu ul li a:hover::after {
@@ -347,8 +347,60 @@ footer ul li a:hover {
 .mobile-main-menu ul li a:hover {
   color: #555;
 }
-/* =====Animations===== */
 
+/* =====Inner Pages===== */
+
+.bg-falcon-9 {
+  background-image: url("../img/falcon-9.webp");
+}
+
+.section-animate {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-inner-center h3 {
+  font-size: 100px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+.section-inner-center p {
+  font-size: 20px;
+
+  animation: fadeInUp 0.6s ease-in 2s;
+  animation-fill-mode: both;
+}
+
+/* ===== Stats ===== */
+
+.stats {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats div span {
+  font-size: 160px;
+}
+
+.stats div h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* =====Animations===== */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -358,6 +410,16 @@ footer ul li a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -391,6 +453,10 @@ footer ul li a:hover {
   .mobile-only {
     display: block;
   }
+
+  .section-inner-center h3 {
+    font-size: 75px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -404,5 +470,19 @@ footer ul li a:hover {
   .logo {
     width: 150px;
     margin: auto;
+  }
+  .section-inner-center {
+    width: 80%;
+  }
+  .section-inner-center h3 {
+    font-size: 50px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats div {
+    margin-bottom: 20px;
   }
 }
