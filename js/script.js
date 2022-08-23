@@ -8,7 +8,6 @@ menuButton.addEventListener("click", navToggle);
 document.addEventListener("scroll", scrollPage);
 
 function navToggle() {
-  r;
   menuButton.classList.toggle("open");
   overLay.classList.toggle("overlay-show");
   document.body.classList.toggle("stop-scrolling");
